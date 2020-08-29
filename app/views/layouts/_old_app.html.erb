@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LearnRails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <!-- NAVBAR / HEADER -->
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+      </ul>
+    </nav>
+
+    <!-- SIDEBAR -->
+
+
+    <!-- MAIN CONTENT-->
+    <%= yield %>
+
+    <!-- JUST TESTING... -->
+    <hr />
+    <% 3.times do %>
+      <li>list item</li>
+    <% end %>
+    <%# this is a comment. It will not be outputted to HTML %>
+    <hr />
+
+    <!-- FOOTER -->
+    <footer>CC 2020 - Johnathan Radünz Nunes</footer>
+  </body>
+</html>
