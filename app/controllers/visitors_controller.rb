@@ -10,8 +10,9 @@ class VisitorsController < ApplicationController
         # To specify a specific layout...
         #render 'visitors/new', :layout => 'landing'
 
-        flash[:notice] = 'Welcome!'
-        flash.now[:alert] = 'My birthday is soon.'
+        # Displaying  messages...
+        #flash[:notice] = 'Welcome!'
+        #flash.now[:alert] = 'My birthday is soon.'
 
     end        
 end
