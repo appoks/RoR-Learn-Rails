@@ -12,15 +12,21 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    
     <main role="main">
-      <%= render 'layouts/messages' %>
-      <%= yield %>
+       <%= render 'layouts/messages' %>
+       <%= yield %>
     </main>
 
-    <footer>
-      <p>2020 - Johnathan Radünz Nunes</p>
-    </footer>
+    <div class="container">
+      <footer class="row">
+        <section class="cp-info">
+          Copyright 2016
+        </section>
+        <section class="cp-add">
+          All rights reserved.
+        </section>
+      </footer>
+    </div>
 
   </body>
 </html>

@@ -1,0 +1,13 @@
+// I'M NOT SURE...
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.cp-info {
+    @extend .col-xs-12;
+    @extend .col-sm-4;
+    }
+
+.cp-add {
+    @extend .col-xs-12;
+    @extend .col-sm-8;
+    }
