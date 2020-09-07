@@ -6,10 +6,10 @@ Rails.application.routes.draw do
   #get  'contact', to: 'contacts#new'
   #post 'contact', to: 'contacts#create'
   ### OR
+  
   resources :contacts, only: [:new, :create]
-
-
-
+  resources :visitors, only: [:new, :create]
+  
   root to: 'visitors#new'
 
 end

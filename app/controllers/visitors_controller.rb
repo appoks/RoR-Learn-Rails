@@ -1,6 +1,7 @@
 class VisitorsController < ApplicationController
     def new
         
+        @visitor = Visitor.new
         @owner = Owner.new
         Rails.logger.debug 'DEBUG: Owner name is ' + @owner.name
 
@@ -14,5 +15,23 @@ class VisitorsController < ApplicationController
         #flash[:notice] = 'Welcome!'
         #flash.now[:alert] = 'My birthday is soon.'
 
-    end        
+    end 
+    
+    def create
+        
+        @visitor = Visitor.new(secure_params)
+        if @visitor.valid?
+                @visitor.subscribe
+                flash[:notice] =  "Signed up as #{@visitor.email}"
+                redirect_to root_path
+        else
+            render :new
+        end  
+    end
+
+    private
+    
+    def secure_params
+        params.require(:visitor).permit(:email)
+    end
 end
